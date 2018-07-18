@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  enable_notifications: false
+  issue_type: 1
+  range1_start: 2018-07-17 20:35:16
+  range1_end: 2018-07-17 20:35:16
+  range2_start: 2018-07-17 20:35:16
+  range2_end: 2018-07-17 20:35:16
+
+two:
+  enable_notifications: false
+  issue_type: 1
+  range1_start: 2018-07-17 20:35:16
+  range1_end: 2018-07-17 20:35:16
+  range2_start: 2018-07-17 20:35:16
+  range2_end: 2018-07-17 20:35:16

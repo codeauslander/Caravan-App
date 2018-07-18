@@ -1,0 +1,13 @@
+<div class="page-container">
+  <h1>Preferences:</h1>
+  <% if current_user %>  
+    <% if current_user.preference %>
+      <div>Preferences</div>
+      <%= render 'preferences/show', preference: current_user.preference  %>
+    <% else %>
+      <strong>You have not preferences!</strong>
+    <% end %>
+  <% else %> 
+    <div>Login to see your preferences.</div>
+  <% end %>
+</div>
