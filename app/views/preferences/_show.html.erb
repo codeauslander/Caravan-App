@@ -1,13 +1,80 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Enable Notifications:</strong>
+
+   <strong>Enable Notifications:</strong>
   <%= preference.enable_notifications %>
+
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+
+ 
 </p>
 
 <p>
   <strong>Issue type:</strong>
+
   <%= preference.issue_type %>
+
+  <% preference.issue_type_pretty.each do |issue_type| %>
+
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+                
+  <% end %>
+
+
+  <%= list = preference.issue_type_pretty %>
+
+  Delay
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[0] == '1' %> >
+    <span class="slider round"></span>
+  </label>
+
+  Cleanliness
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[1] == '1' %>>
+    <span class="slider round"></span>
+  </label>
+
+  Safety
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[2] == '1' %>>
+    <span class="slider round"></span>
+  </label>
+
+  Crowding
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[3] == '1' %>>
+    <span class="slider round"></span>
+  </label>
+
+  Accessibility
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[4] == '1' %>>
+    <span class="slider round"></span>
+  </label>
+
+  Staff
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[5] == '1' %>>
+    <span class="slider round"></span>
+  </label>
+
+  Other
+  <label class="switch">
+    <input type="checkbox" <%= 'checked' if list[6] == '1' %>>
+    <span class="slider round"></span>
+  </label>
+
+
+
+
 </p>
 
 <p>
