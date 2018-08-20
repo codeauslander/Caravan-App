@@ -10,15 +10,18 @@
 
 <p>
   <strong>Notifications</strong>
-  <% preference.types.each_with_index do |issue, index| %>
-    <div>
-      <%= issue %>
-      <label class="switch">
-        <input type="checkbox" <%= 'checked' if preference.unmask_issue_type[index] == '1' %> >
-        <span class="slider round"></span>
-      </label>
-    </div>
-  <% end %>
+  <form action="/preferences" method="post">
+      <% preference.types.each_with_index do |issue, index| %>
+        <div>
+          <%= issue %>
+          <label class="switch">
+            <input type="checkbox" <%= 'checked' if preference.unmask_issue_type[index] == '1' %> >
+            <span class="slider round"></span>
+          </label>
+        </div>
+      <% end %>
+      <input type="submit" value="Submit This Form">
+  </form>
 </p>
 
 <p>
