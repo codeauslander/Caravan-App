@@ -1,5 +1,6 @@
 class CreatePreferences < ActiveRecord::Migration[5.0]
   def change
+    # SL: I would love to see what the range1 and range2 columns are for.
     create_table :preferences do |t|
       t.integer :user_id
       t.boolean :enable_notifications
